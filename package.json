@@ -1,0 +1,25 @@
+{
+  "name": "bsre-docs-new",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.28"
+  },
+  "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
+    "bsre-ui-kit": "file:../bsre-ui-kit-vue"
+  }
+}
