@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 import path from 'path';
 
 export default defineConfig({
+  base: '/bsre-design-system/',
   title: 'BSrE Design System',
   description:
     'Dokumentasi resmi sistem desain Balai Besar Sertifikasi Elektronik',
