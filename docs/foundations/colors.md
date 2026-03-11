@@ -1,189 +1,525 @@
 # Colors
 
-Warna adalah elemen paling mendasar dalam membangun identitas visual aplikasi **BSrE**. Sistem warna kita dirancang untuk menciptakan antarmuka yang konsisten, mudah diakses (_accessible_), dan memiliki hierarki informasi yang jelas.
+**BSrE Design System** menggunakan warna secara terarah untuk **menata hierarki informasi, menyampaikan pesan, dan menyorot interaksi penting di layar**. Melalui penerapan palet warna yang terstandarisasi dan rasio kontras yang optimal, panduan ini dirancang untuk menghasilkan antarmuka yang secara visual mudah dicerna dan mencegah kebingungan navigasi.
+
+## Default Color Palette
 
 <div class="tip custom-block" style="padding-top: 8px">
   <p class="custom-block-title">💡 Klik untuk Copy</p>
-  <p>Arahkan kursor dan <b>klik pada kotak warna mana saja</b> di bawah ini untuk menyalin kode HEX/RGBA ke <i>clipboard</i> secara otomatis!</p>
+  <p>Arahkan kursor dan <b>klik pada palet warna</b> di bawah ini untuk menyalin kode HEX secara otomatis!</p>
 </div>
 
-## Pedoman Penggunaan
+<div class="mt-8 flex flex-col">
 
-Untuk menjaga konsistensi dan aksesibilitas, perhatikan fungsi masing-masing skala warna:
-
-- **`lightest` & `lighter` (Bintang):** Digunakan untuk warna latar belakang (_background fill_) pada elemen seperti _alert_, _badge_, atau _hover state_ yang halus.
-- **`main` (Bintang):** Digunakan sebagai warna inti untuk aksi utama (tombol), teks tebal, dan ikon yang membutuhkan perhatian khusus.
-- **`dark` hingga `darkest`:** Digunakan untuk _hover state_ dari tombol utama, garis batas (_border_), atau teks yang membutuhkan kontras sangat tinggi di atas latar berwarna.
-
-## 1. Primary Color
-
-**Biru BSrE** adalah warna identitas utama instansi kita. Warna ini mewakili kepercayaan dan profesionalisme.
-
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-4 mb-8">
-  <div onclick="navigator.clipboard.writeText('#EAF6FC'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #EAF6FC">
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #EAF6FC;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-lightest</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#EAF6FC</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#D5EEF9'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #D5EEF9">
-    <div class="absolute top-2 left-2 text-blue-400/60"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div>
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #D5EEF9;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-lighter</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#D5EEF9</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#6DC3EA'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #6DC3EA">
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #6DC3EA;"><span class="opacity-0 group-hover:opacity-100 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-light</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#6DC3EA</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#2FAAE1'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden shadow-md ring-2 ring-[#2FAAE1] ring-offset-1 transition-all relative" title="Copy #2FAAE1">
-    <div class="absolute top-2 left-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div>
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #2FAAE1;"><span class="opacity-0 group-hover:opacity-100 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-[#2FAAE1]">blue-main</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#2FAAE1</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#2588B4'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #2588B4">
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #2588B4;"><span class="opacity-0 group-hover:opacity-100 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-dark</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#2588B4</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#12445A'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #12445A">
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #12445A;"><span class="opacity-0 group-hover:opacity-100 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-darker</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#12445A</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('#0E3343'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all relative" title="Copy #0E3343">
-    <div class="h-20 w-full relative flex items-center justify-center" style="background-color: #0E3343;"><span class="opacity-0 group-hover:opacity-100 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded shadow transition-opacity">Copy</span></div>
-    <div class="p-3 bg-white"><div class="text-[10px] font-bold text-gray-800">blue-darkest</div><div class="text-[10px] text-gray-500 mt-1 uppercase">#0E3343</div></div>
-  </div>
-</div>
-
-## 2. Secondary Color (Semantic)
-
-Warna semantik digunakan untuk menyampaikan makna, status, atau validasi tanpa bergantung sepenuhnya pada teks. Jangan menggunakan warna semantik hanya untuk estetika.
-
-### Danger (Red)
-
-Digunakan untuk mengindikasikan _error_, kegagalan sistem, peringatan destruktif (seperti menghapus data), atau status penolakan.
-
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-2 mb-6">
-  <div onclick="navigator.clipboard.writeText('#FBE7EC'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #FBE7EC"><div class="h-16 w-full flex justify-center items-center" style="background-color: #FBE7EC;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-lightest</div><div class="text-[9px] text-gray-500 uppercase">#FBE7EC</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#F7D0D9'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #F7D0D9"><div class="absolute top-1 left-1.5 text-red-300"><svg width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #F7D0D9;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-lighter</div><div class="text-[9px] text-gray-500 uppercase">#F7D0D9</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#E45C7C'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #E45C7C"><div class="h-16 w-full flex justify-center items-center" style="background-color: #E45C7C;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-light</div><div class="text-[9px] text-gray-500 uppercase">#E45C7C</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#D91744'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden ring-2 ring-[#D91744] ring-offset-1 relative" title="Copy #D91744"><div class="absolute top-1 left-1.5 text-white"><svg width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #D91744;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-[#D91744]">red-main</div><div class="text-[9px] text-gray-500 uppercase">#D91744</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#AD1236'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #AD1236"><div class="h-16 w-full flex justify-center items-center" style="background-color: #AD1236;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-dark</div><div class="text-[9px] text-gray-500 uppercase">#AD1236</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#56091B'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #56091B"><div class="h-16 w-full flex justify-center items-center" style="background-color: #56091B;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-darker</div><div class="text-[9px] text-gray-500 uppercase">#56091B</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#410614'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #410614"><div class="h-16 w-full flex justify-center items-center" style="background-color: #410614;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">red-darkest</div><div class="text-[9px] text-gray-500 uppercase">#410614</div></div></div>
-</div>
-
-### Warning (Yellow)
-
-Digunakan untuk peringatan non-fatal, proses yang sedang tertunda (_pending_), atau informasi yang memerlukan kewaspadaan pengguna.
-
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-2 mb-6">
-  <div onclick="navigator.clipboard.writeText('#FEF5E6'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #FEF5E6"><div class="h-16 w-full flex justify-center items-center" style="background-color: #FEF5E6;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-lightest</div><div class="text-[9px] text-gray-500 uppercase">#FEF5E6</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#FDE8CE'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #FDE8CE"><div class="absolute top-1 left-1.5 text-yellow-500/50"><svg width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #FDE8CE;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-lighter</div><div class="text-[9px] text-gray-500 uppercase">#FDE8CE</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#F8BB54'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #F8BB54"><div class="h-16 w-full flex justify-center items-center" style="background-color: #F8BB54;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-light</div><div class="text-[9px] text-gray-500 uppercase">#F8BB54</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#F59E0B'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden ring-2 ring-[#F59E0B] ring-offset-1 relative" title="Copy #F59E0B"><div class="absolute top-1 left-1.5 text-white"><svg width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #F59E0B;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-[#F59E0B]">yellow-main</div><div class="text-[9px] text-gray-500 uppercase">#F59E0B</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#C47E08'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #C47E08"><div class="h-16 w-full flex justify-center items-center" style="background-color: #C47E08;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-dark</div><div class="text-[9px] text-gray-500 uppercase">#C47E08</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#623F04'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #623F04"><div class="h-16 w-full flex justify-center items-center" style="background-color: #623F04;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-darker</div><div class="text-[9px] text-gray-500 uppercase">#623F04</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#492F03'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #492F03"><div class="h-16 w-full flex justify-center items-center" style="background-color: #492F03;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">yellow-darkest</div><div class="text-[9px] text-gray-500 uppercase">#492F03</div></div></div>
-</div>
-
-### Success (Green)
-
-Digunakan untuk konfirmasi positif, tugas yang berhasil diselesaikan, atau status verifikasi (_verified_).
-
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-2 mb-6">
-  <div onclick="navigator.clipboard.writeText('#E7F8F2'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #E7F8F2"><div class="h-16 w-full flex justify-center items-center" style="background-color: #E7F8F2;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-lightest</div><div class="text-[9px] text-gray-500 uppercase">#E7F8F2</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#CFF1E5'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #CFF1E5"><div class="absolute top-1 left-1.5 text-green-400"><svg width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #CFF1E5;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-lighter</div><div class="text-[9px] text-gray-500 uppercase">#CFF1E5</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#57CEA6'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #57CEA6"><div class="h-16 w-full flex justify-center items-center" style="background-color: #57CEA6;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-light</div><div class="text-[9px] text-gray-500 uppercase">#57CEA6</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#10B981'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden ring-2 ring-[#10B981] ring-offset-1 relative" title="Copy #10B981"><div class="absolute top-1 left-1.5 text-white"><svg width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #10B981;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-[#10B981]">green-main</div><div class="text-[9px] text-gray-500 uppercase">#10B981</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#0C9467'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #0C9467"><div class="h-16 w-full flex justify-center items-center" style="background-color: #0C9467;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-dark</div><div class="text-[9px] text-gray-500 uppercase">#0C9467</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#064A33'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #064A33"><div class="h-16 w-full flex justify-center items-center" style="background-color: #064A33;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-darker</div><div class="text-[9px] text-gray-500 uppercase">#064A33</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#043726'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #043726"><div class="h-16 w-full flex justify-center items-center" style="background-color: #043726;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">green-darkest</div><div class="text-[9px] text-gray-500 uppercase">#043726</div></div></div>
-</div>
-
-### Discovery / Highlight (Purple)
-
-Warna ungu digunakan secara khusus untuk menonjolkan fitur baru, informasi promo, atau membedakan elemen/kategori spesial agar tidak bertabrakan dengan aksi utama aplikasi (Biru).
-
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-2 mb-2">
-  <div onclick="navigator.clipboard.writeText('#F9EDFB'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #F9EDFB"><div class="h-16 w-full flex justify-center items-center" style="background-color: #F9EDFB;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-lightest</div><div class="text-[9px] text-gray-500 uppercase">#F9EDFB</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#F4DBF8'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #F4DBF8"><div class="absolute top-1 left-1.5 text-fuchsia-300"><svg width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #F4DBF8;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-lighter</div><div class="text-[9px] text-gray-500 uppercase">#F4DBF8</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#D881E8'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #D881E8"><div class="h-16 w-full flex justify-center items-center" style="background-color: #D881E8;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-light</div><div class="text-[9px] text-gray-500 uppercase">#D881E8</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#CC4BDF'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden ring-2 ring-[#CC4BDF] ring-offset-1 relative" title="Copy #CC4BDF"><div class="absolute top-1 left-1.5 text-white"><svg width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #CC4BDF;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-[#CC4BDF]">purple-main</div><div class="text-[9px] text-gray-500 uppercase">#CC4BDF</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#A33CB2'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #A33CB2"><div class="h-16 w-full flex justify-center items-center" style="background-color: #A33CB2;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-dark</div><div class="text-[9px] text-gray-500 uppercase">#A33CB2</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#511E59'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #511E59"><div class="h-16 w-full flex justify-center items-center" style="background-color: #511E59;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-darker</div><div class="text-[9px] text-gray-500 uppercase">#511E59</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#3D1642'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #3D1642"><div class="h-16 w-full flex justify-center items-center" style="background-color: #3D1642;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-darkest</div><div class="text-[9px] text-gray-500 uppercase">#3D1642</div></div></div>
-</div>
-
-<!-- <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-2 mb-6">
-  <div onclick="navigator.clipboard.writeText('#EAECFB'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #EAECFB"><div class="h-16 w-full flex justify-center items-center" style="background-color: #EAECFB;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-lightest</div><div class="text-[9px] text-gray-500 uppercase">#EAECFB</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#D5D9F8'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #D5D9F8"><div class="absolute top-1 left-1.5 text-indigo-300"><svg width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #D5D9F8;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-lighter</div><div class="text-[9px] text-gray-500 uppercase">#D5D9F8</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#6E7AE9'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #6E7AE9"><div class="h-16 w-full flex justify-center items-center" style="background-color: #6E7AE9;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-light</div><div class="text-[9px] text-gray-500 uppercase">#6E7AE9</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#3142E0'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden ring-2 ring-[#3142E0] ring-offset-1 relative" title="Copy #3142E0"><div class="absolute top-1 left-1.5 text-white"><svg width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg></div><div class="h-16 w-full flex justify-center items-center" style="background-color: #3142E0;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-[#3142E0]">purple-main (alt)</div><div class="text-[9px] text-gray-500 uppercase">#3142E0</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#2734B3'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #2734B3"><div class="h-16 w-full flex justify-center items-center" style="background-color: #2734B3;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-dark</div><div class="text-[9px] text-gray-500 uppercase">#2734B3</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#131A59'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #131A59"><div class="h-16 w-full flex justify-center items-center" style="background-color: #131A59;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-darker</div><div class="text-[9px] text-gray-500 uppercase">#131A59</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#0E1343'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #0E1343"><div class="h-16 w-full flex justify-center items-center" style="background-color: #0E1343;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-2 bg-white"><div class="text-[10px] font-bold text-gray-800">purple-darkest</div><div class="text-[9px] text-gray-500 uppercase">#0E1343</div></div></div>
-</div> -->
-
-## 3. Basic Color (Surfaces)
-
-Warna dasar digunakan untuk latar belakang halaman utama, _card_, garis batas, atau elemen antarmuka yang membutuhkan kontras sangat halus agar tidak berebut fokus dengan warna semantik.
-
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 mb-8">
-  <div onclick="navigator.clipboard.writeText('#FFFFFF'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #FFFFFF"><div class="h-16 w-full flex justify-center items-center" style="background-color: #FFFFFF;"><span class="opacity-0 group-hover:opacity-100 bg-black/5 text-gray-800 border border-gray-200 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">white</div><div class="text-[10px] text-gray-500 uppercase mt-1">#FFFFFF</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#E2E1E4'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #E2E1E4"><div class="h-16 w-full flex justify-center items-center" style="background-color: #E2E1E4;"><span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">gray-light</div><div class="text-[10px] text-gray-500 uppercase mt-1">#E2E1E4</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#8D8390'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #8D8390"><div class="h-16 w-full flex justify-center items-center" style="background-color: #8D8390;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">gray-main</div><div class="text-[10px] text-gray-500 uppercase mt-1">#8D8390</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#5D506C'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #5D506C"><div class="h-16 w-full flex justify-center items-center" style="background-color: #5D506C;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">gray-dark</div><div class="text-[10px] text-gray-500 uppercase mt-1">#5D506C</div></div></div>
-  <div onclick="navigator.clipboard.writeText('#5D506C'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy #000000"><div class="h-16 w-full flex justify-center items-center" style="background-color: #000000;"><span class="opacity-0 group-hover:opacity-100 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded">Copy</span></div><div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">black</div><div class="text-[10px] text-gray-500 uppercase mt-1">#000000</div></div></div>
-</div>
-
-## 4. Text Color
-
-Daripada menggunakan warna abu-abu _solid_ yang berbeda-beda, sistem desain kita menggunakan basis warna hitam bernada ungu gelap (`#2F2B3D`) yang diatur tingkat opasitasnya (_opacity_) untuk menciptakan hierarki tipografi.
-
-Pendekatan ini menjamin teks akan selalu _blend-in_ (menyatu) secara harmonis dengan warna latar apapun yang ada di belakangnya.
-
-<div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4 mb-8">
-  <div onclick="navigator.clipboard.writeText('rgba(47, 43, 61, 0.9)'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy rgba(47, 43, 61, 0.9)">
-    <div class="h-16 w-full flex justify-center items-center relative" style="background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0), linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0); background-size: 10px 10px; background-position: 0 0, 5px 5px;">
-      <div class="absolute inset-0" style="background-color: rgba(47, 43, 61, 0.9);"></div>
-      <span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded z-10">Copy</span>
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Base / Surfaces</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.base</code>
     </div>
-    <div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">text-primary</div><div class="text-[9px] text-gray-500 uppercase mt-1">#2F2B3D (90%)</div></div>
-  </div>
-  
-  <div onclick="navigator.clipboard.writeText('rgba(47, 43, 61, 0.7)'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy rgba(47, 43, 61, 0.7)">
-    <div class="h-16 w-full flex justify-center items-center relative" style="background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0), linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0); background-size: 10px 10px; background-position: 0 0, 5px 5px;">
-      <div class="absolute inset-0" style="background-color: rgba(47, 43, 61, 0.7);"></div>
-      <span class="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-800 text-[10px] font-bold px-2 py-1 rounded z-10">Copy</span>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#FFFFFF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-gray-200 transition-transform group-hover:scale-105" style="background-color: #FFFFFF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">White</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FFFFFF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#111827'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #111827;"></div>
+        <div class="text-[11px] font-bold text-gray-900">Black</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#111827</div>
+      </div>
     </div>
-    <div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">text-secondary</div><div class="text-[9px] text-gray-500 uppercase mt-1">#2F2B3D (70%)</div></div>
   </div>
 
-  <div onclick="navigator.clipboard.writeText('rgba(47, 43, 61, 0.55)'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy rgba(47, 43, 61, 0.55)">
-    <div class="h-16 w-full flex justify-center items-center relative" style="background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0), linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0); background-size: 10px 10px; background-position: 0 0, 5px 5px;">
-      <div class="absolute inset-0" style="background-color: rgba(47, 43, 61, 0.55);"></div>
-      <span class="opacity-0 group-hover:opacity-100 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded z-10">Copy</span>
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Gray</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.gray</code>
     </div>
-    <div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">text-subtitle</div><div class="text-[9px] text-gray-500 uppercase mt-1">#2F2B3D (55%)</div></div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#F9FAFB'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F9FAFB;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F9FAFB</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F3F4F6'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F3F4F6;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F3F4F6</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#E5E7EB'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #E5E7EB;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#E5E7EB</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#D1D5DB'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #D1D5DB;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#D1D5DB</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#9CA3AF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #9CA3AF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#9CA3AF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#6B7280'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #6B7280;"></div>
+        <div class="text-[11px] font-bold text-gray-900">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#6B7280</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#4B5563'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #4B5563;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#4B5563</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#374151'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #374151;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#374151</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#1F2937'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #1F2937;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#1F2937</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#111827'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-gray-900', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-gray-900', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #111827;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#111827</div>
+      </div>
+    </div>
   </div>
 
-  <div onclick="navigator.clipboard.writeText('rgba(47, 43, 61, 0.4)'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy rgba(47, 43, 61, 0.4)">
-    <div class="h-16 w-full flex justify-center items-center relative" style="background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0), linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0); background-size: 10px 10px; background-position: 0 0, 5px 5px;">
-      <div class="absolute inset-0" style="background-color: rgba(47, 43, 61, 0.4);"></div>
-      <span class="opacity-0 group-hover:opacity-100 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded z-10">Copy</span>
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Blue</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.primary</code>
     </div>
-    <div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">text-disable</div><div class="text-[9px] text-gray-500 uppercase mt-1">#2F2B3D (40%)</div></div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#EAF6FC'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #EAF6FC;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#EAF6FC</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#D5EEF9'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #D5EEF9;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#D5EEF9</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#B5E0F4'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #B5E0F4;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#B5E0F4</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#8FD0EE'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #8FD0EE;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#8FD0EE</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#6DC3EA'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #6DC3EA;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#6DC3EA</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#2FAAE1'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#2FAAE1] transition-transform group-hover:scale-105" style="background-color: #2FAAE1;"></div>
+        <div class="text-[11px] font-bold text-[#2FAAE1]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#2FAAE1</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#2588B4'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #2588B4;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#2588B4</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#1A668A'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #1A668A;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#1A668A</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#12445A'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #12445A;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#12445A</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#0E3343'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-bsre-blue', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-bsre-blue', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #0E3343;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#0E3343</div>
+      </div>
+    </div>
   </div>
 
-  <div onclick="navigator.clipboard.writeText('rgba(47, 43, 61, 0.22)'); let s = this.querySelector('span'); s.innerText = 'Copied!'; setTimeout(() => s.innerText = 'Copy', 1500);" class="group cursor-pointer rounded-xl border border-gray-200 overflow-hidden hover:shadow-md relative" title="Copy rgba(47, 43, 61, 0.22)">
-    <div class="h-16 w-full flex justify-center items-center relative" style="background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0), linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0); background-size: 10px 10px; background-position: 0 0, 5px 5px;">
-      <div class="absolute inset-0" style="background-color: rgba(47, 43, 61, 0.22);"></div>
-      <span class="opacity-0 group-hover:opacity-100 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded z-10">Copy</span>
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Red</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.danger</code>
     </div>
-    <div class="p-3 bg-white border-t border-gray-100"><div class="text-[11px] font-bold text-gray-800">input-border</div><div class="text-[9px] text-gray-500 uppercase mt-1">#2F2B3D (22%)</div></div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#FBE7EC'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FBE7EC;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FBE7EC</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F7D0D9'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F7D0D9;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F7D0D9</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F0A6B8'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F0A6B8;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F0A6B8</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#E45C7C'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #E45C7C;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#E45C7C</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#DB3A60'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #DB3A60;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#DB3A60</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#D91744'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#D91744] transition-transform group-hover:scale-105" style="background-color: #D91744;"></div>
+        <div class="text-[11px] font-bold text-[#D91744]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#D91744</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#AD1236'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #AD1236;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#AD1236</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#820D29'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #820D29;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#820D29</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#56091B'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #56091B;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#56091B</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#410614'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-red-500', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-red-500', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #410614;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#410614</div>
+      </div>
+    </div>
   </div>
+
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Yellow</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.warning</code>
+    </div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#FEF5E6'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FEF5E6;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FEF5E6</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#FDE8CE'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FDE8CE;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FDE8CE</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#FBD49F'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FBD49F;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FBD49F</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F8BB54'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F8BB54;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F8BB54</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F6AC2C'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F6AC2C;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F6AC2C</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F59E0B'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#F59E0B] transition-transform group-hover:scale-105" style="background-color: #F59E0B;"></div>
+        <div class="text-[11px] font-bold text-[#F59E0B]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F59E0B</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#C47E08'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #C47E08;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#C47E08</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#935E06'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #935E06;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#935E06</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#623F04'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #623F04;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#623F04</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#492F03'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-yellow-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-yellow-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #492F03;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#492F03</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Green</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.success</code>
+    </div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#E7F8F2'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #E7F8F2;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#E7F8F2</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#CFF1E5'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #CFF1E5;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#CFF1E5</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#9DE3CB'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #9DE3CB;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#9DE3CB</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#57CEA6'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #57CEA6;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#57CEA6</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#33C393'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #33C393;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#33C393</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#10B981'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#10B981] transition-transform group-hover:scale-105" style="background-color: #10B981;"></div>
+        <div class="text-[11px] font-bold text-[#10B981]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#10B981</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#0C9467'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #0C9467;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#0C9467</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#096F4D'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #096F4D;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#096F4D</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#064A33'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #064A33;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#064A33</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#043726'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-green-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-green-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #043726;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#043726</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Indigo</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.indigo</code>
+    </div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#EEF2FF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #EEF2FF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#EEF2FF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#E0E7FF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #E0E7FF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#E0E7FF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#C7D2FE'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #C7D2FE;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#C7D2FE</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#A5B4FC'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #A5B4FC;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#A5B4FC</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#818CF8'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #818CF8;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#818CF8</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#6366F1'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#6366F1] transition-transform group-hover:scale-105" style="background-color: #6366F1;"></div>
+        <div class="text-[11px] font-bold text-[#6366F1]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#6366F1</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#4F46E5'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #4F46E5;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#4F46E5</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#4338CA'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #4338CA;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#4338CA</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#3730A3'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #3730A3;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#3730A3</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#312E81'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-indigo-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-indigo-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #312E81;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#312E81</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Purple</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.purple</code>
+    </div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#FAF5FF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FAF5FF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FAF5FF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F3E8FF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F3E8FF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F3E8FF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#E9D5FF'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #E9D5FF;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#E9D5FF</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#D8B4FE'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #D8B4FE;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#D8B4FE</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#C084FC'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #C084FC;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#C084FC</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#A855F7'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#A855F7] transition-transform group-hover:scale-105" style="background-color: #A855F7;"></div>
+        <div class="text-[11px] font-bold text-[#A855F7]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#A855F7</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#9333EA'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #9333EA;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#9333EA</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#7E22CE'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #7E22CE;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#7E22CE</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#6B21A8'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #6B21A8;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#6B21A8</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#581C87'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-purple-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-purple-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #581C87;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#581C87</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col xl:flex-row items-start py-6 border-b border-gray-100">
+    <div class="w-full xl:w-48 flex-shrink-0 mb-4 xl:mb-0">
+      <h3 class="text-base font-bold text-gray-900 !mt-0 !mb-1">Pink</h3>
+      <code class="text-[11px] text-gray-500 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">colors.pink</code>
+    </div>
+    <div class="flex flex-wrap gap-2 sm:gap-3 w-full">
+      <div onclick="navigator.clipboard.writeText('#FDF2F8'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FDF2F8;"></div>
+        <div class="text-[11px] font-bold text-gray-900">50</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FDF2F8</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#FCE7F3'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FCE7F3;"></div>
+        <div class="text-[11px] font-bold text-gray-900">100</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FCE7F3</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#FBCFE8'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #FBCFE8;"></div>
+        <div class="text-[11px] font-bold text-gray-900">200</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#FBCFE8</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F9A8D4'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F9A8D4;"></div>
+        <div class="text-[11px] font-bold text-gray-900">300</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F9A8D4</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#F472B6'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #F472B6;"></div>
+        <div class="text-[11px] font-bold text-gray-900">400</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#F472B6</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#EC4899'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-md mb-2 border-2 border-[#EC4899] transition-transform group-hover:scale-105" style="background-color: #EC4899;"></div>
+        <div class="text-[11px] font-bold text-[#EC4899]">500</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#EC4899</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#DB2777'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #DB2777;"></div>
+        <div class="text-[11px] font-bold text-gray-900">600</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#DB2777</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#BE185D'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #BE185D;"></div>
+        <div class="text-[11px] font-bold text-gray-900">700</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#BE185D</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#9D174D'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #9D174D;"></div>
+        <div class="text-[11px] font-bold text-gray-900">800</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#9D174D</div>
+      </div>
+      <div onclick="navigator.clipboard.writeText('#831843'); let h = this.querySelector('.hex-text'); let o = h.innerText; h.innerText = 'Copied!'; h.classList.add('text-pink-600', 'font-bold'); setTimeout(() => { h.innerText = o; h.classList.remove('text-pink-600', 'font-bold'); }, 1500);" class="group cursor-pointer flex flex-col w-[18%] sm:w-[8%] md:w-14">
+        <div class="h-12 w-full rounded-lg shadow-sm mb-2 border border-black/5 transition-transform group-hover:scale-105" style="background-color: #831843;"></div>
+        <div class="text-[11px] font-bold text-gray-900">900</div><div class="hex-text text-[10px] text-gray-500 uppercase transition-all duration-300">#831843</div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+## Panduan Semantik (Semantic Guidelines)
+
+Setiap warna dalam **BSrE Design System** memiliki makna dan tujuan spesifik. Penggunaan warna secara semantik membantu menjaga konsistensi dan memudahkan pengguna memahami antarmuka tanpa harus membaca teks.
+
+<div class="overflow-x-auto mt-6 mb-12"><table class="w-full text-left border-collapse bg-white !m-0" style="margin: 0 !important;">
+    <thead class="bg-gray-50/50">
+      <tr class="border-b border-gray-200">
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-16 text-center">Warna</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-32 whitespace-nowrap">Peran Semantik</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-44 whitespace-nowrap">Palet Dasar</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900">Fungsi & Penggunaan</th>
+      </tr>
+    </thead>
+    <tbody class="text-sm text-gray-700 divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-color: #2FAAE1;"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Primary</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-blue-50 text-bsre-blue text-xs font-medium border border-blue-100">Blue</span></td>
+        <td class="py-3 px-4 leading-relaxed">Mewakili identitas BSrE. Digunakan untuk elemen interaktif utama, tombol <i>call-to-action</i> (CTA), <i>link</i>, dan status aktif.</td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-color: #10B981;"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Success</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-green-50 text-green-600 text-xs font-medium border border-green-100">Green</span></td>
+        <td class="py-3 px-4 leading-relaxed">Mengomunikasikan penyelesaian tugas yang berhasil, validasi positif, atau sistem yang berjalan normal.</td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-color: #F59E0B;"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Warning</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-yellow-50 text-yellow-600 text-xs font-medium border border-yellow-100">Yellow</span></td>
+        <td class="py-3 px-4 leading-relaxed">Memberikan peringatan yang tidak menghalangi proses (non-fatal), status <i>pending</i>, atau aksi yang membutuhkan kehati-hatian.</td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-color: #D91744;"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Danger</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-red-50 text-red-600 text-xs font-medium border border-red-100">Red</span></td>
+        <td class="py-3 px-4 leading-relaxed">Mengindikasikan <i>error</i>, kegagalan sistem, atau tindakan destruktif yang tidak bisa dikembalikan (seperti menghapus data permanen).</td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-image: linear-gradient(to right bottom, #6366F1, #A855F7, #EC4899);"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Discovery</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-medium border border-purple-100">Indigo / Purple / Pink</span></td>
+        <td class="py-3 px-4 leading-relaxed">Digunakan untuk menyoroti fitur baru, status spesial, label kategori, promosi, atau informasi sekunder agar tidak bertabrakan dengan warna Primary.</td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4"><div class="w-5 h-5 mx-auto rounded-full shadow-inner" style="background-color: #6B7280;"></div></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">Neutral</td>
+        <td class="py-3 px-4"><span class="inline-block px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200">Gray / Base</span></td>
+        <td class="py-3 px-4 leading-relaxed">Digunakan secara luas untuk tipografi (teks), latar belakang, garis batas (<i>border</i>), dan elemen antarmuka yang dinonaktifkan (<i>disabled</i>).</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+## Text Color
+
+Saat pengguna berinteraksi dengan aplikasi, mereka jarang membaca teks kata demi kata; mereka memindai (_scanning_) layar untuk mencari informasi yang paling relevan. Jika semua teks (judul utama, paragraf isi, catatan kaki) ditampilkan dengan tingkat kepekatan warna yang seragam, antarmuka akan terasa datar, sesak, dan memicu kelelahan visual (_cognitive overload_).
+
+Untuk mengatasi hal tersebut, **BSrE Design System** menerapkan hierarki tipografi dengan membedakan warna teks ke dalam beberapa tingkatan (seperti _primary_, _secondary_, hingga _disabled_). Secara tidak sadar mata pengguna diarahkan ke informasi krusial yang harus dibaca pertama kali, sekaligus mendorong informasi pelengkap perlahan ke latar belakang visual.
+
+<div class="overflow-x-auto mt-6 mb-12"><table class="w-full text-left border-collapse bg-white !m-0" style="margin: 0 !important;">
+    <thead class="bg-gray-50/50">
+      <tr class="border-b border-gray-200">
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-32 whitespace-nowrap">Token / Class</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-44 whitespace-nowrap">Nilai (Click to Copy)</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900">Fungsi & Penggunaan</th>
+        <th class="py-3 px-4 font-bold text-sm text-gray-900 w-24 text-center">Preview</th>
+      </tr>
+    </thead>
+    <tbody class="text-sm text-gray-700 divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4 font-semibold text-gray-900">text-primary</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172AE6'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172AE6 (90%)</code></td>
+        <td class="py-3 px-4 leading-relaxed">Untuk teks yang paling penting. Digunakan pada judul (<i>heading</i>), <i>sub-heading</i>, dan teks paragraf utama.</td>
+        <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg" style="background-color: rgba(15, 23, 42, 0.9);"></div></td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4 font-semibold text-gray-900">text-secondary</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172AB3'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172AB3 (70%)</code></td>
+        <td class="py-3 px-4 leading-relaxed">Untuk informasi pendukung. Digunakan pada deskripsi singkat, metadata (tanggal/waktu), <i>breadcrumb</i>, atau teks di dalam tabel.</td>
+        <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg" style="background-color: rgba(15, 23, 42, 0.7);"></div></td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4 font-semibold text-gray-900">text-muted</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172A80'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172A80 (50%)</code></td>
+        <td class="py-3 px-4 leading-relaxed">Untuk teks yang intensitasnya diturunkan agar tidak mendominasi. Digunakan pada <i>caption</i> gambar, catatan kecil, atau <i>helper text</i> input.</td>
+        <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg" style="background-color: rgba(15, 23, 42, 0.5);"></div></td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4 font-semibold text-gray-900">text-placeholder</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172A59'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172A59 (35%)</code></td>
+        <td class="py-3 px-4 leading-relaxed">Untuk teks sementara. Digunakan khusus di dalam kolom <i>input</i> form (sebagai bayangan sebelum pengguna mengetik).</td>
+        <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg" style="background-color: rgba(15, 23, 42, 0.35);"></div></td>
+      </tr>
+      <tr class="hover:bg-gray-50/30 transition-colors">
+        <td class="py-3 px-4 font-semibold text-gray-900">text-disabled</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172A33'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-bsre-blue', 'border-bsre-blue', 'bg-blue-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172A33 (20%)</code></td>
+        <td class="py-3 px-4 leading-relaxed">Untuk teks pada elemen yang sedang dimatikan (<i>inactive</i>). Digunakan pada tombol yang belum bisa diklik atau <i>input</i> yang di-<i>lock</i>.</td>
+        <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg" style="background-color: rgba(15, 23, 42, 0.20);"></div></td>
+      </tr>
+    </tbody>
+  </table></div>
