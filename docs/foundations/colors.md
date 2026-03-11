@@ -492,8 +492,8 @@ Untuk mengatasi hal tersebut, **BSrE Design System** menerapkan hierarki tipogra
     </thead>
     <tbody class="text-sm text-gray-700 divide-y divide-gray-100">
       <tr class="hover:bg-gray-50/30 transition-colors">
-        <td class="py-3 px-4 font-semibold text-gray-900">text-primary</td>
-        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172AE6'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-primary-500', 'border-primary-500', 'bg-primary-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-primary-500', 'border-primary-500', 'bg-primary-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172AE6 (90%)</code></td>
+        <td class="py-3 px-4 font-semibold text-gray-900">text-main</td>
+        <td class="py-3 px-4"><code onclick="navigator.clipboard.writeText('#0F172AE6'); let o = this.innerText; this.innerText = 'Copied!'; this.classList.add('text-main-500', 'border-primary-500', 'bg-primary-50'); setTimeout(() => { this.innerText = o; this.classList.remove('text-main-500', 'border-primary-500', 'bg-primary-50'); }, 1500);" class="cursor-pointer hover:bg-gray-100 transition-colors px-2 py-1.5 rounded bg-gray-50 border border-gray-200 text-[11px] font-mono text-gray-600 select-none whitespace-nowrap block w-fit" title="Click to copy">#0F172AE6 (90%)</code></td>
         <td class="py-3 px-4 leading-relaxed">Untuk teks yang paling penting. Digunakan pada judul (<i>heading</i>), <i>sub-heading</i>, dan teks paragraf utama.</td>
         <td class="py-3 px-4"><div class="w-10 h-10 mx-auto rounded-lg bg-[#0F172AE6]"></div></td>
       </tr>
